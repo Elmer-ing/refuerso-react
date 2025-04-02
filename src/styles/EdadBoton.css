@@ -3,3 +3,77 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Estilos generales */
+.contenedor {
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .eb-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .eb-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Sección de información */
+  .eb-item__info {
+    flex: 1;
+  }
+  
+  .eb-item__info-nombre {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .eb-item__info-edad {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Botones */
+  .eb-item__botones {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .eb-item__boton {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .eb-item__boton:hover {
+    background-color: #4338ca;
+    transform: translateY(-1px);
+  }
+  
+  .eb-item__boton:active {
+    transform: translateY(0);
+  }
+  
+  /* Efecto para el botón al hacer hover */
+  .eb-item__boton:hover {
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.3);
+  }
