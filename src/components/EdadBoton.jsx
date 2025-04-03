@@ -5,8 +5,7 @@ import Item from './Item';
 
 function EdadBoton() {
   
-  // const [edad, setEdad] = useState(21);
-
+// Componente funcional EdadBoton
   const [personas, setPersonas] = useState([
     {
       id: 1,
