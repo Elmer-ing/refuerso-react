@@ -34,12 +34,14 @@ function EdadBoton() {
     }
   ])
 
+
+// Función para aumentar la edad de una persona específica
   const aumentarEdad = (id) => {
     setPersonas(prevPersonas =>  // ← React pasa el estado anterior aquí
       prevPersonas.map(persona => 
         persona.id === id 
-          ? { ...persona, edad: persona.edad + 1 } 
-          : persona
+          ? { ...persona, edad: persona.edad + 1 } // Incrementa la edad si el ID coincide
+          : persona // Devuelve la persona sin cambios si el ID no coincide
       )
     );
   };
