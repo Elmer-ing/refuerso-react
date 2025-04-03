@@ -1,13 +1,13 @@
 import '../styles/EdadBoton.css'
-import React from 'react';
-// import { useState } from 'react';
+import React, { use } from 'react';
+import { useState } from 'react';
 import Item from './Item';
 
 function EdadBoton() {
   
   // const [edad, setEdad] = useState(21);
 
-  const personasItems = [
+  const [personas, setPersonas] = useState([
     {
       id: 1,
       nombre: 'Elmer Mosquera',
@@ -32,16 +32,28 @@ function EdadBoton() {
       id: 5,
       nombre: 'Sebastian Monterrosa',
       edad: 21
-    },
-  ]
+    }
+  ])
+
+  const aumentarEdad = (id) => {
+    setPersonas(prevPersonas =>  // ← React pasa el estado anterior aquí
+      prevPersonas.map(persona => 
+        persona.id === id 
+          ? { ...persona, edad: persona.edad + 1 } 
+          : persona
+      )
+    );
+  };
 
   return(
     <div className="contenedor">
-      {personasItems.map((persona)=>(
+      {personas.map((persona)=>(
         <Item
           key={persona.id}
+          id={persona.id}
           nombre={persona.nombre} 
           edad={persona.edad}
+          onAumentarEdad={aumentarEdad}
         />
       ))}
 
