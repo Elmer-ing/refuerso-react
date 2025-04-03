@@ -3,9 +3,10 @@ import React, { use } from 'react';
 import { useState } from 'react';
 import Item from './Item';
 
+// Componente funcional EdadBoton
 function EdadBoton() {
   
-// Componente funcional EdadBoton
+// Estado inicial para la lista de personas
   const [personas, setPersonas] = useState([
     {
       id: 1,
