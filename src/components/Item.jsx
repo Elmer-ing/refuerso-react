@@ -1,5 +1,6 @@
 import React from "react";
 
+// Componente funcional Item que recibe propiedades: id, nombre, edad y onAumentarEdad
 function Item({id, nombre, edad, onAumentarEdad }){
     return(
         <div className='eb-item'>
